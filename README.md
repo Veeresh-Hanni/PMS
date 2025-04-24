@@ -90,3 +90,8 @@ New Feeature Register as Patient
 - Patient can edit his/her profile
 - Patient can view his/her prescription
 - Patient can view his/her appointment
+
+
+## QRCODE of our repo
+ - Scan this for see github repo
+![QR Code](qr_code.png)
