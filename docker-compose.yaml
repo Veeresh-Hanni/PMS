@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql # Specify the latest version of MySQL for clarity
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: PharmDB
+      MYSQL_ROOT_PASSWORD: Sachin@123  # Using environment variable for better security
+    ports:
+      - "3307:3306"  # Exposing port 3306 to the host machine
+    volumes:
+      - ./db_data:/var/lib/mysql  # Persistent data storage for MySQL
+
+  web:
+    build:
+      context: .
+    container_name: pharmacy-management-system
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app  # Bind the project folder to the container
+    ports:
+      - "8000:8000"  # Map port 8001 on the host to 8000 inside the container
+    depends_on:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: Sachin@123 # Use the same env variable in the web container
+    hostname: 'db'
+
+volumes:
+  db_data:  # Named volume for database persistence
