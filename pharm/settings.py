@@ -297,22 +297,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pharmacy_management_py',
         'USER': 'root',
-        'PASSWORD': 'Veeru@123',
+        'PASSWORD': 'your_password',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'pharmacy_management_py',
-#         'USER': 'root',
-#         'PASSWORD': 'Veeru@123',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
 
 
 
