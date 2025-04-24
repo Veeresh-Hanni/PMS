@@ -93,5 +93,7 @@ New Feeature Register as Patient
 
 
 ## QRCODE of our repo
- - Scan this for see github repo
-![QR Code](qr_code.png)
+
+ - Scan this to see the GitHub repo
+
+<img src="qr_code.png" alt="QR Code" width="200" height="200">
